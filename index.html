@@ -84,14 +84,33 @@
 	</div>
 
 	<script>
-	    function playLocalVideo(event) {
-	        event.preventDefault(); // 阻止默认行为
+	    // function playLocalVideo(event) {
+	    //     event.preventDefault(); // 阻止默认行为
 	
-	        // 获取video元素
+	    //     // 获取video元素
+	    //     var videoElement = document.getElementById('demo-video');
+	    //     var videoContainer = document.getElementById('video-container');
+	        
+	    //     videoElement.play();
+	    //     videoContainer.style.display = 'block';
+	    // }
+	   function playLocalVideo(event) {
+	        event.preventDefault(); // 阻止链接的默认行为
+	
+	        // 获取视频元素和其容器
 	        var videoElement = document.getElementById('demo-video');
 	        var videoContainer = document.getElementById('video-container');
-	        
-	        videoElement.play();
+	
+	        // 添加 'loadeddata' 事件的事件监听器，该事件在视频加载完成时触发
+	        videoElement.addEventListener('loadeddata', function () {
+	            // 视频加载完成后播放
+	            videoElement.play();
+	        });
+	
+	        // 设置视频源
+	        videoElement.src = 'images/TLTS.mp4';
+	
+	        // 显示视频容器
 	        videoContainer.style.display = 'block';
 	    }
 	</script>
