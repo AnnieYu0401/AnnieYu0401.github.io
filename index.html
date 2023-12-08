@@ -65,7 +65,7 @@
               <!-- </a> -->
               <br>
               BEV 3D camera detection</br>
-              2D/3D traffic light, traffic sign detection</br>
+              2D/3D traffic light, traffic sign detection ( <a href="#" onclick="playLocalVideo()">Demo</a>)</br>
               2D lane detection</br>
               All of these program can be deployed on vehicles and achieve good performance.
               <!-- <strong>Zujin Guo</strong>, Bo Li, Jingkang Yang, Zijian Zhou (alphabetical order) -->
@@ -77,6 +77,29 @@
 
             </td>
           </tr>
+	  <script>
+	    function playLocalVideo() {
+	        // 获取video元素
+	        var videoElement = document.createElement('video');
+	        videoElement.width = 1600; // 设置视频宽度
+	        videoElement.height = 900; // 设置视频高度
+	        videoElement.controls = true; // 显示播放控件
+	
+	        // 创建source元素，指定本地视频文件路径
+	        var sourceElement = document.createElement('source');
+	        sourceElement.src = 'images/TLTS.mp4'; // 替换为实际的本地视频路径
+	        sourceElement.type = 'video/mp4';
+	
+	        // 将source元素添加到video元素中
+	        videoElement.appendChild(sourceElement);
+	
+	        // 将video元素添加到body中
+	        document.body.appendChild(videoElement);
+	
+	        // 播放视频
+	        videoElement.play();
+	    }
+	</script>
 
         </tbody></table>
 
