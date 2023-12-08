@@ -84,32 +84,16 @@
 	</div>
 
 	<script>
-		function playLocalVideo(event) {
-		    event.preventDefault(); // 阻止默认行为
-		
-		    var videoElement = document.getElementById('demo-video');
-		    var videoContainer = document.getElementById('video-container');
-		
-		    // 监听视频加载完成事件
-		    videoElement.addEventListener('loadedmetadata', function () {
-			// 播放视频并显示容器
-			videoElement.play();
-			videoContainer.style.display = 'block';
-		    });
-		
-		    // 设置视频源
-		    videoElement.src = 'images/TLTS.mp4';
-		}
-	    // function playLocalVideo(event) {
-	    //     event.preventDefault(); // 阻止默认行为
+	    function playLocalVideo(event) {
+	        event.preventDefault(); // 阻止默认行为
 	
-	    //     // 获取video元素
-	    //     var videoElement = document.getElementById('demo-video');
-	    //     var videoContainer = document.getElementById('video-container');
+	        // 获取video元素
+	        var videoElement = document.getElementById('demo-video');
+	        var videoContainer = document.getElementById('video-container');
 	        
-	    //     videoElement.play();
-	    //     videoContainer.style.display = 'block';
-	    // }
+	        videoElement.play();
+	        videoContainer.style.display = 'block';
+	    }
 	</script>
 
 
